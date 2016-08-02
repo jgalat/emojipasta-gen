@@ -1,2 +1,2 @@
 # emojipasta-gen
-It's an emojipasta generator.
+It's an emojipasta generator :joy:.
