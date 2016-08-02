@@ -1,0 +1,11 @@
+.preview {
+	display: none;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0.2em;
+	width: 100%;
+	text-align: center;
+	font-size: 0.8em;
+}
