@@ -3,7 +3,6 @@
 ## Description
 It's an emojipasta generator :joy:.
 
----
 ## Credits
 
 This wouldn't be possible without the following repositories
