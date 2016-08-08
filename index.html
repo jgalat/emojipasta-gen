@@ -16,29 +16,26 @@
         <h3 class="text-big text-gray">emojipasta generator</h3>
       </div>
     </div>
-    <div class="container" >
-      <div class="section" style="text-align: center;">
-        <div class="row">
-          <div class="col-xs-12">
-            <textarea class="textarea text-white" type="text" id="emojipasta"></textarea>
-            <p class="preview" id="previewpasta"></p>
-          </div>
+    <div class="container-medium">
+      <div class="tabs" style="text-align: center">
+         <a href="#" title="Text" class="tab active" id="text" onclick="previewpasta(0)">Text</a>
+         <a href="#" title="Apple" class="tab" id="apple" onclick="previewpasta(1)"><span class="apple emj1361"></span></a>
+         <a href="#" title="Android" class="tab" id="android" onclick="previewpasta(2)"><span class="android emj1361"></span></a>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <textarea class="textarea text-white" type="text" id="emojipasta"></textarea>
+          <p class="preview" id="previewpasta"></p>
         </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <button class="button block-mobile button-primary" onclick="emojipasta()" type="submit">
-              generate
-            </button>
-            <button class="button block-mobile button-primary" onclick="copypasta()" type="submit">
-              copy
-            </button>
-            <button class="button block-mobile button-primary" onclick="previewpasta(0)" type="submit">
-              preview <span class="apple emj1361"></span>
-            </button>
-            <button class="button block-mobile button-primary" onclick="previewpasta(1)" type="submit">
-              preview <span class="android emj1361"></span>
-            </button>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <button class="button block-mobile button-primary" onclick="emojipasta()" type="submit">
+            generate
+          </button>
+          <button class="button block-mobile button-primary" onclick="copypasta()" type="submit">
+            copy
+          </button>
         </div>
       </div>
     </div>

@@ -1,3 +1,9 @@
+.container-medium {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
 .textarea {
 	height: 140px;
 	padding: 5px;
