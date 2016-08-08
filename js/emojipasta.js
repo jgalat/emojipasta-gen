@@ -1,4 +1,5 @@
-$.getScript("js/jMinEmoji.min.js");
+$.getScript("js/jMinEmojiApple.min.js");
+$.getScript("js/jMinEmojiAndroid.min.js");
 
 function emojipasta() {
   var emojipasta = document.getElementById("emojipasta");
@@ -19,12 +20,21 @@ function copypasta(){
   document.execCommand("copy");
 };
 
-function previewpasta(){
+function previewpasta(n){
   var emojipasta = document.getElementById("emojipasta");
   var previewpasta = document.getElementById("previewpasta");
   var emojitext = emojipasta.value;
   emojipasta.style.display = "none";
   previewpasta.innerHTML = emojitext;
   previewpasta.style.display = "block";
-  $('.preview').minEmoji();
+  switch(n) {
+    case 0:
+      $('.preview').minEmojiApple();
+      break;
+    case 1:
+      $('.preview').minEmojiAndroid();
+      break;
+    default:
+      break;
+  }
 };

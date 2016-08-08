@@ -6,10 +6,8 @@
     <title>free emojipasta</title>
     <link rel="stylesheet" href="css/sierra.min.css">
     <link rel="stylesheet" href="css/emojipasta.css">
-    <link rel="stylesheet" href="css/minEmoji.css">
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/emojipasta.js" type="text/javascript"></script>
-    <!-- thank you https://github.com/heidilabs/markov-php -->
   </head>
   <body onload="emojipasta()">
     <div class="section background-dark">
@@ -22,21 +20,38 @@
       <div class="section" style="text-align: center;">
         <div class="row">
           <div class="col-xs-12">
-            <textarea class="textarea text-white" style="height:150px;" type="text" id="emojipasta"></textarea>
+            <textarea class="textarea text-white" type="text" id="emojipasta"></textarea>
             <p class="preview" id="previewpasta"></p>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <button class="button block-mobile button-primary" onclick="emojipasta()" type="submit">generate</button>
-            <button class="button block-mobile button-primary" onclick="copypasta()" type="submit">copy</button>
-            <button class="button block-mobile button-primary" onclick="previewpasta()" type="submit">preview</button>
+            <button class="button block-mobile button-primary" onclick="emojipasta()" type="submit">
+              generate
+            </button>
+            <button class="button block-mobile button-primary" onclick="copypasta()" type="submit">
+              copy
+            </button>
+            <button class="button block-mobile button-primary" onclick="previewpasta(0)" type="submit">
+              preview <span class="apple emj1361"></span>
+            </button>
+            <button class="button block-mobile button-primary" onclick="previewpasta(1)" type="submit">
+              preview <span class="android emj1361"></span>
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div class="footer">
-       <span class="em emj1361"></span> Lucio, pls, return the pad <span class="em emj1361"></span>
+      <span class="android emj878"></span>
+      <span class="android emj1361"></span>
+      <span class="android emj1253"></span>
+      <span class="android emj1393"></span>
+      good shit right there
+      <span class="android emj878"></span>
+      <span class="android emj1361"></span>
+      <span class="android emj1253"></span>
+      <span class="android emj1393"></span>
     </div>
   </body>
 </html>
