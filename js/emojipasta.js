@@ -1,11 +1,7 @@
-$.getScript("js/jMinEmojiApple.min.js");
-$.getScript("js/jMinEmojiAndroid.min.js");
+$.getScript("js/jMinEmoji.js");
 
 function emojipasta() {
   var emojipasta = document.getElementById("emojipasta");
-  var previewpasta = document.getElementById("previewpasta");
-  previewpasta.style.display = "none";
-  emojipasta.style.display = "block";
   setactivetab(0);
   $.get("gen/", function (data){
       emojipasta.value = data;
@@ -14,30 +10,35 @@ function emojipasta() {
 
 function copypasta(){
   var emojipasta = document.getElementById("emojipasta");
-  var previewpasta = document.getElementById("previewpasta");
-  previewpasta.style.display = "none";
-  emojipasta.style.display = "block";
   setactivetab(0);
   emojipasta.select();
   document.execCommand("copy");
 };
 
 function setactivetab(n){
+  var emojipasta = document.getElementById("emojipasta");
+  var previewpasta = document.getElementById("previewpasta");
   var text = document.getElementById("text");
   var apple = document.getElementById("apple");
   var android = document.getElementById("android");
   switch(n) {
     case 0:
+      previewpasta.style.display = "none";
+      emojipasta.style.display = "block";
       text.classList.add("active");
       apple.classList.remove("active");
       android.classList.remove("active");
       break;
     case 1:
+      emojipasta.style.display = "none";
+      previewpasta.style.display = "block";
       apple.classList.add("active");
       text.classList.remove("active");
       android.classList.remove("active");
       break;
     case 2:
+      emojipasta.style.display = "none";
+      previewpasta.style.display = "block";
       android.classList.add("active");
       text.classList.remove("active");
       apple.classList.remove("active");
@@ -55,18 +56,12 @@ function previewpasta(n){
   setactivetab(n);
   switch(n) {
     case 0:
-      previewpasta.style.display = "none";
-      emojipasta.style.display = "block";
       break;
     case 1:
-      emojipasta.style.display = "none";
-      previewpasta.style.display = "block";
-      $('.preview').minEmojiApple();
+      $('.preview').minEmoji("apple");
       break;
     case 2:
-      emojipasta.style.display = "none";
-      previewpasta.style.display = "block";
-      $('.preview').minEmojiAndroid();
+      $('.preview').minEmoji("android");
       break;
     default:
       break;

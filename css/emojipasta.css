@@ -33,7 +33,6 @@
 	margin-bottom: -4px;
 	display: -moz-inline-stack;
 	display: inline-block;
-	*display: inline;
 	zoom: 1;
 }
 
@@ -44,7 +43,6 @@
 	margin-bottom: -4px;
 	display: -moz-inline-stack;
 	display: inline-block;
-	*display: inline;
 	zoom: 1;
 }
 
