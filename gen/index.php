@@ -10,6 +10,12 @@
   $markov = new MarkovPHP\WordChain($text, $order);
 
   $emojipasta = $markov->generate($length, $theme);
-  echo $emojipasta;
+  if (isset($_GET['json'])){
+    echo '"' . addslashes($emojipasta) . '"';
+  } else {
+    echo $emojipasta;
+  }
+
+
 
 ?>
