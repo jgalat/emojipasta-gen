@@ -16,6 +16,4 @@
     echo $emojipasta;
   }
 
-
-
 ?>
