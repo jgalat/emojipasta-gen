@@ -14,27 +14,22 @@ function copypasta(){
 };
 
 function setactivetab(n){
+  $(".tabs .tab").removeClass("active");
   switch(n) {
     case 0:
       $("#previewpasta").css("display", "none");
       $("#emojipasta").css("display", "block");
       $("#text").addClass("active");
-      $("#apple").removeClass("active");
-      $("#android").removeClass("active");
       break;
     case 1:
       $("#emojipasta").css("display", "none");
       $("#previewpasta").css("display", "block");
       $("#apple").addClass("active");
-      $("#text").removeClass("active");
-      $("#android").removeClass("active");
       break;
     case 2:
       $("#emojipasta").css("display", "none");
       $("#previewpasta").css("display", "block");
       $("#android").addClass("active");
-      $("#text").removeClass("active");
-      $("#apple").removeClass("active");
       break;
     default:
       break;
