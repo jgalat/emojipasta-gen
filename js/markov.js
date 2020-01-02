@@ -1,8 +1,8 @@
-function choice (a) {
+function choice(a) {
   return a[Math.floor(a.length * Math.random())];
 };
 
-function markov(startwords, terminals, wordstats) {
+function Markov(startwords, terminals, wordstats) {
 
   this.terminals = terminals;
   this.startwords = startwords;
@@ -19,8 +19,9 @@ function markov(startwords, terminals, wordstats) {
     return choice(result);
   }
 
-  this.makeChain = function (min_length, start = null) {
-    if(!start)
+  this.makeChain = function(min_length, start) {
+    var word;
+    if (!start)
       word = choice(this.startwords);
     else
       word = this.findStart(start);

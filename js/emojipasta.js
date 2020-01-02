@@ -1,15 +1,11 @@
-$.getScript("js/jMinEmoji.js");
-
 function emojipasta() {
   setactivetab(0);
-  $.get("gen/", function (data){
-      $("#emojipasta").val(data);
-    });
+  emojis();
 };
 
 function copypasta(){
   setactivetab(0);
-  $("#emojipasta").select();
+  $("#emojis").select();
   document.execCommand("copy");
 };
 
@@ -18,16 +14,16 @@ function setactivetab(n){
   switch(n) {
     case 0:
       $("#previewpasta").css("display", "none");
-      $("#emojipasta").css("display", "block");
+      $("#emojis").css("display", "block");
       $("#text").addClass("active");
       break;
     case 1:
-      $("#emojipasta").css("display", "none");
+      $("#emojis").css("display", "none");
       $("#previewpasta").css("display", "block");
       $("#apple").addClass("active");
       break;
     case 2:
-      $("#emojipasta").css("display", "none");
+      $("#emojis").css("display", "none");
       $("#previewpasta").css("display", "block");
       $("#android").addClass("active");
       break;
@@ -37,7 +33,7 @@ function setactivetab(n){
 };
 
 function previewpasta(n){
-  var emojitext = $("#emojipasta").val();
+  var emojitext = $("#emojis").val();
   $("#previewpasta").html(emojitext);
   setactivetab(n);
   switch(n) {
