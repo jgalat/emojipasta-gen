@@ -90,12 +90,12 @@ if __name__ == "__main__":
         exit()
 
     with open(sys.argv[1], 'r') as corpus:
-        lyrics = corpus.read()
+        emojipastas = corpus.read()
 
     js = []
-    prepared_lyrics = prepareCorpus(lyrics)
+    prepared_emojipastas = prepareCorpus(emojipastas)
 
-    (s, t, w) = generateDicts(prepared_lyrics, 2)
+    (s, t, w) = generateDicts(prepared_emojipastas, 2)
     js.append(prepareJsVars("emojis", s, t, w))
 
     with open("js/markov.js", 'r') as markovjs:
